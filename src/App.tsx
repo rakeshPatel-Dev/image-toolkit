@@ -1,41 +1,60 @@
-import About from "./components/pages/about/About"
-import Hero from "./components/pages/Hero"
-import Pricing from "./components/pages/Pricing"
-import { ReviewMarquee } from "./components/pages/ReviewMarquee"
-import { DotPattern } from "./components/ui/dot-pattern"
-import AnimatedBasedVelocity from "./components/pages/AnimatedBasedVelocity"
-import { cn } from "./lib/utils"
-import Process from "./components/pages/Process"
-import FaqSection from "./components/pages/FaqSection"
-import Preloader from "./components/pages/Preloader"
-import Contact from "./components/pages/Contact"
-import Footer from "./components/pages/Footer"
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/header";
+import Footer from "./components/Footer";
+import Preloader from "./components/Preloader";
+import PageNotFound from "./components/PageNotFound";
 
+import Hero from "./pages/Hero";
+import About from "./pages/about/About";
+import Pricing from "./pages/Pricing";
+import { ReviewMarquee } from "./pages/ReviewMarquee";
+import AnimatedBasedVelocity from "./components/AnimatedBasedVelocity";
+import Process from "./pages/Process";
+import FaqSection from "./pages/FaqSection";
+import Contact from "./pages/Contact";
 
+import { useReTriggerAnimation } from "./hooks/useReTriggerAnimation";
+import { AnimatePresence } from "framer-motion";
+import { useLocation } from "react-router-dom";
+import Convert from "./pages/Convert";
 
+const Home = () => (
+  <>
+<Preloader />
+    <Hero />
+    <AnimatedBasedVelocity />
+    <Process />
+    <About />
+    <ReviewMarquee />
+    <Pricing />
+    <FaqSection />
+    <Contact />
+  </>
+);
 
 const App = () => {
+    const location = useLocation();
+  useReTriggerAnimation();
   return (
-    <div className=" bg-white dark:bg-black">
-
-      <DotPattern className={cn(
-        "[mask-image:radial-gradient(600px_circle_at_center,white,transparent)] h-screen text-orange-500 dark:text-orange-900 z-0 absolute "
-      )} />
-      <div className="relative z-1">
-        <Preloader />
-        <Hero />
-        <AnimatedBasedVelocity />
-        <Process />
-        <About />
-        <ReviewMarquee />
-        <Pricing />
-        <FaqSection />
-        <Contact/>
-        <Footer/>
-
-      </div>
+     <div className="bg-white dark:bg-black">
+      <Header />
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/process" element={<Process />} />
+          <Route path="/reviews" element={<ReviewMarquee />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/faq" element={<FaqSection />} />
+          <Route path="/convert" element={<Convert />} />
+          <Route path="*" element={<PageNotFound />} />
+          
+        </Routes>
+      </AnimatePresence>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

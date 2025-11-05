@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils"
-import { Marquee } from "../ui/marquee"
-import { h1 } from "motion/react-client"
-import { TextAnimate } from "../ui/text-animate"
+import { Marquee } from "../components/ui/marquee"
+import { TextAnimate } from "../components/ui/text-animate"
 
 const reviews = [
   {
@@ -130,15 +129,15 @@ export function ReviewMarquee() {
     <div className="w-full px-4 sm:px-6 md:px-8 lg:px-0 flex flex-col items-start justify-center gap-3 text-left max-w-4xl mx-auto">
 
       <TextAnimate
-        animation="blurInUp"
-        by="text"
+        animation="fadeIn"
+        by="word"
         className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-10 sm:mt-16 md:mt-20 text-gray-900 dark:text-gray-100"
       >
         User Reviews
       </TextAnimate>
 
       <TextAnimate
-        animation="blurInUp"
+        animation="fadeIn"
         by="word"
         className="text-sm sm:text-base md:text-lg text-gray-800 dark:text-gray-300 leading-relaxed max-w-2xl"
       >

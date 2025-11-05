@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCheck, X } from "lucide-react";
-import { TextAnimate } from "../ui/text-animate";
+import { CheckCheck } from "lucide-react";
+import { TextAnimate } from "../components/ui/text-animate";
 
 const Pricing = () => {
   const [billing, setBilling] = useState<"Monthly" | "Yearly">("Monthly");
@@ -38,10 +38,10 @@ const Pricing = () => {
     <div className="min-h-screen w-full dark:bg-black py-16 px-20 md:px-10 lg:px-40 font-sans">
       {/* Header */}
       <div className="text-center mb-10">
-        <TextAnimate animation="blurInUp" by="word" className="text-3xl md:text-5xl font-black text-[#0f0f0f] dark:text-white mb-2">
+        <TextAnimate animation="fadeIn" by="word" className="text-3xl md:text-5xl font-black text-[#0f0f0f] dark:text-white mb-2">
           Choose the plan that's right for you.
         </TextAnimate>
-        <TextAnimate animation="blurInUp" by="word" className="text-gray-600 dark:text-[#9db0b9] text-base md:text-lg">
+        <TextAnimate animation="fadeIn" by="word" className="text-gray-600 dark:text-[#9db0b9] text-base md:text-lg">
           Join our community of happy customers. No credit card required.
         </TextAnimate>
       </div>

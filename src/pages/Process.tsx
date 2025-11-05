@@ -1,5 +1,4 @@
-import React from 'react'
-import { TextAnimate } from '../ui/text-animate'
+import { TextAnimate } from '../components/ui/text-animate'
 
 const Process = () => {
   return (
@@ -15,15 +14,15 @@ const Process = () => {
           {/* Title */}
           <div className="flex flex-col items-center text-center">
             <TextAnimate
-              animation="blurInUp"
-              by="text"
+              animation="fadeIn"
+              by="word"
               className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tighter text-[#0f0f0f] dark:text-white"
             >
               Transform Your Images Seamlessly
             </TextAnimate>
 
             <TextAnimate
-              animation="blurInUp"
+              animation="fadeIn"
               by="word"
               className="mt-4 max-w-2xl text-base sm:text-lg text-gray-600 dark:text-white/50"
             >
@@ -35,15 +34,15 @@ const Process = () => {
           {/* Steps */}
           <div className="relative w-full">
             {/* Vertical connecting line */}
-            <div className="absolute left-1/2 top-14 hidden md:block h-[calc(100%-7rem)] w-1 -translate-x-1/2 bg-gradient-to-b from-primary/30 via-primary/10 to-transparent" />
+            <div className="absolute left-1/2 top-14 hidden md:block h-[calc(100%-7rem)] w-1 -translate-x-1/2 bg-linear-to-b from-primary/30 via-primary/10 to-transparent" />
 
             <ol className="grid w-full grid-cols-1 gap-12 md:grid-cols-3 md:gap-8">
               
               {/* Step 1 */}
               <li className="group relative flex flex-col items-center gap-6 text-center md:items-start md:text-left">
                 <div className="flex items-center gap-6 md:w-full">
-                  <div className="relative z-10 flex h-28 w-28 shrink-0 items-center justify-center rounded-full border border-border-dark bg-surface-dark shadow-xl shadow-black/20 transition-all duration-300 group-hover:scale-105 group-hover:border-primary/50 group-hover:shadow-primary/20">
-                    <div className="absolute inset-0 animate-gradient-move rounded-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent bg-[length:200%_200%] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="relative z-10 flex h-28 w-28 shrink-0 items-center justify-center rounded-full border border-border bg-card shadow-xl shadow-black/20 transition-all duration-300 group-hover:scale-105 group-hover:border-primary/50 group-hover:shadow-primary/20">
+                    <div className="absolute inset-0 animate-gradient-move rounded-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent bg-size-[200%_200%] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                     <svg
                       className="h-12 w-12 text-zinc-400 transition-colors duration-300 group-hover:text-primary"
                       fill="none"
@@ -59,16 +58,16 @@ const Process = () => {
                   </div>
 
                   {/* Hover beam line */}
-                  <div className="absolute -top-14 left-1/2 hidden sm:block h-1 w-40 md:w-full -translate-x-1/2 scale-x-0 transform-gpu bg-gradient-to-r from-transparent via-primary/50 to-transparent transition-transform duration-500 group-hover:scale-x-100" />
+                  <div className="absolute -top-14 left-1/2 hidden sm:block h-1 w-40 md:w-full -translate-x-1/2 scale-x-0 transform-gpu bg-linear-to-r from-transparent via-primary/50 to-transparent transition-transform duration-500 group-hover:scale-x-100" />
 
-                  <div className="hidden grow border-t border-dashed border-border-dark md:block" />
+                  <div className="hidden grow border-t border-dashed border-border md:block" />
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  <TextAnimate animation="blurInUp" by="word" className="text-xl font-bold text-black/90 dark:text-white">
+                  <TextAnimate animation="fadeIn" by="word" className="text-xl font-bold text-black/90 dark:text-white">
                     1. Upload Your Image
                   </TextAnimate>
-                  <TextAnimate animation="blurInUp" by="word" className="text-gray-600 dark:text-white/50">
+                  <TextAnimate animation="fadeIn" by="word" className="text-gray-600 dark:text-white/50">
                     Simply drag and drop or select an image from your device to begin the transformation.
                   </TextAnimate>
                 </div>
@@ -78,8 +77,8 @@ const Process = () => {
               <li className="group relative flex flex-col items-center gap-6 text-center md:items-start md:text-left">
                 <div className="flex items-center gap-6 md:w-full">
                   <div className="hidden grow border-t border-dashed border-border-dark md:block" />
-                  <div className="relative z-10 flex h-28 w-28 shrink-0 items-center justify-center rounded-full border border-border-dark bg-surface-dark shadow-xl shadow-black/20 transition-all duration-300 group-hover:scale-105 group-hover:border-primary/50 group-hover:shadow-primary/20">
-                    <div className="absolute inset-0 animate-gradient-move rounded-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent bg-[length:200%_200%] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="relative z-10 flex h-28 w-28 shrink-0 items-center justify-center rounded-full border border-border bg-card shadow-xl shadow-black/20 transition-all duration-300 group-hover:scale-105 group-hover:border-primary/50 group-hover:shadow-primary/20">
+                    <div className="absolute inset-0 animate-gradient-move rounded-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent bg-size-[200%_200%] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                     <svg
                       className="h-12 w-12 text-zinc-400 transition-colors duration-300 group-hover:text-primary"
                       fill="none"
@@ -98,16 +97,16 @@ const Process = () => {
                   </div>
 
                   {/* Hover beam line */}
-                  <div className="absolute -top-14 left-1/2 hidden sm:block h-1 w-40 md:w-full -translate-x-1/2 scale-x-0 transform-gpu bg-gradient-to-r from-transparent via-primary/50 to-transparent transition-transform duration-500 group-hover:scale-x-100" />
+                  <div className="absolute -top-14 left-1/2 hidden sm:block h-1 w-40 md:w-full -translate-x-1/2 scale-x-0 transform-gpu bg-linear-to-r from-transparent via-primary/50 to-transparent transition-transform duration-500 group-hover:scale-x-100" />
 
-                  <div className="hidden grow border-t border-dashed border-border-dark md:block" />
+                  <div className="hidden grow border-t border-dashed border-border md:block" />
                 </div>
 
                 <div className="flex flex-col items-center gap-2">
-                  <TextAnimate animation="blurInUp" by="word" className="text-xl font-bold text-black/90 dark:text-white">
+                  <TextAnimate animation="fadeIn" by="word" className="text-xl font-bold text-black/90 dark:text-white">
                     2. Process Your Image
                   </TextAnimate>
-                  <TextAnimate animation="blurInUp" by="word" className="text-center text-gray-600 dark:text-white/50">
+                  <TextAnimate animation="fadeIn" by="word" className="text-center text-gray-600 dark:text-white/50">
                     Choose to convert, compress, or upscale. Our AI toolkit automatically works its magic.
                   </TextAnimate>
                 </div>
@@ -117,8 +116,8 @@ const Process = () => {
               <li className="group relative flex flex-col items-center gap-6 text-center md:items-start md:text-left">
                 <div className="flex items-center gap-6 md:w-full">
                   <div className="hidden grow border-t border-dashed border-border-dark md:block" />
-                  <div className="relative z-10 flex h-28 w-28 shrink-0 items-center justify-center rounded-full border border-border-dark bg-surface-dark shadow-xl shadow-black/20 transition-all duration-300 group-hover:scale-105 group-hover:border-primary/50 group-hover:shadow-primary/20">
-                    <div className="absolute inset-0 animate-gradient-move rounded-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent bg-[length:200%_200%] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="relative z-10 flex h-28 w-28 shrink-0 items-center justify-center rounded-full border border-border bg-card shadow-xl shadow-black/20 transition-all duration-300 group-hover:scale-105 group-hover:border-primary/50 group-hover:shadow-primary/20">
+                    <div className="absolute inset-0 animate-gradient-move rounded-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent bg-size-[200%_200%] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                     <svg
                       className="h-12 w-12 text-zinc-400 transition-colors duration-300 group-hover:text-primary"
                       fill="none"
@@ -136,14 +135,14 @@ const Process = () => {
                   </div>
 
                   {/* Hover beam line */}
-                  <div className="absolute -top-14 left-1/2 hidden sm:block h-1 w-40 md:w-full -translate-x-1/2 scale-x-0 transform-gpu bg-gradient-to-r from-transparent via-primary/50 to-transparent transition-transform duration-500 group-hover:scale-x-100" />
+                  <div className="absolute -top-14 left-1/2 hidden sm:block h-1 w-40 md:w-full -translate-x-1/2 scale-x-0 transform-gpu bg-linear-to-r from-transparent via-primary/50 to-transparent transition-transform duration-500 group-hover:scale-x-100" />
                 </div>
 
                 <div className="flex flex-col sm:items-end gap-2">
-                  <TextAnimate animation="blurInUp" by="word" className="text-xl font-bold text-black/90 dark:text-white">
+                  <TextAnimate animation="fadeIn" by="word" className="text-xl font-bold text-black/90 dark:text-white">
                     3. Download Your File
                   </TextAnimate>
-                  <TextAnimate animation="blurInUp" by="word" className="sm:text-right text-gray-600 dark:text-white/50">
+                  <TextAnimate animation="fadeIn" by="word" className="sm:text-right text-gray-600 dark:text-white/50">
                     Preview your optimized image and download it instantly in your desired format.
                   </TextAnimate>
                 </div>

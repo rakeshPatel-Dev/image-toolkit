@@ -1,4 +1,5 @@
 import { ToolCase, Github, Twitter, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -15,23 +16,28 @@ const Footer = () => {
           </div>
 
           {/* Links */}
-          <div className="md:col-span-6 grid grid-cols-2 sm:grid-cols-3 gap-8">
+          <div className="md:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-8">
             {/* Toolkit */}
             <div>
               <h3 className="font-bold text-black dark:text-white mb-4">Toolkit</h3>
               <ul className="space-y-3">
-                {["Convert", "Compress", "Upscale"].map((item) => (
-                  <li key={item}>
-                    <a
-                      href="#"
-                      className="text-[#666] dark:text-[#E0E0E0] hover:text-primary transition-colors"
+                {[
+                  { name: "Convert", path: "/convert" },
+                  { name: "Compress", path: "/compress" },
+                  { name: "Upscale", path: "/upscale" },
+                ].map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      to={item.path}
+                      className="text-[#555] hover:text-orange-600 transition-all hover:underline hover:underline-offset-6 decoration-[1.5px]"
                     >
-                      {item}
-                    </a>
+                      {item.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
+
 
             {/* Company */}
             <div>
@@ -40,8 +46,8 @@ const Footer = () => {
                 {["About Us", "Contact", "Blog"].map((item) => (
                   <li key={item}>
                     <a
-                      href="#"
-                      className="text-[#666] dark:text-[#E0E0E0] hover:text-primary transition-colors"
+                      href="javascript:void(0)"
+                      className="text-[#555]  hover:text-orange-600 transition-all hover:underline hover:underline-offset-6 decoration-[1.5px]"
                     >
                       {item}
                     </a>
@@ -57,8 +63,24 @@ const Footer = () => {
                 {["Privacy Policy", "Terms of Service"].map((item) => (
                   <li key={item}>
                     <a
-                      href="#"
-                      className="text-[#666] dark:text-[#E0E0E0] hover:text-primary transition-colors"
+                      href="javascript:void(0)"
+                      className="text-[#555]  hover:text-orange-600 transition-all hover:underline hover:underline-offset-6 decoration-[1.5px]"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* More from developer */}
+            <div>
+              <h3 className="font-bold text-black dark:text-white mb-4 ">More from Developer</h3>
+              <ul className="space-y-3">
+                {["PhotoLab App", "Call Reminder App"].map((item) => (
+                  <li key={item}>
+                    <a
+                      href="javascript:void(0)"
+                      className="text-[#555]  hover:text-orange-600 transition-all hover:underline hover:underline-offset-6 decoration-[1.5px]"
                     >
                       {item}
                     </a>

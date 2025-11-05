@@ -14,15 +14,15 @@ const About = () => {
         {/* Heading Section */}
         <div className="w-full text-center sm:text-left mb-12">
           <TextAnimate
-            animation="blurInUp"
-            by="text"
+            animation="fadeIn"
+            by="word"
             className="text-gray-900 dark:text-white text-3xl sm:text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]"
           >
             About Our Image Toolkit
           </TextAnimate>
 
           <TextAnimate
-            animation="blurInUp"
+            animation="fadeIn"
             by="word"
             className="text-gray-700 dark:text-gray-400 text-sm sm:text-base md:text-lg font-normal leading-relaxed max-w-2xl mx-auto sm:mx-0 mt-3"
           >

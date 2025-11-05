@@ -2,7 +2,7 @@ import React from 'react'
 import { ChevronRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { AnimatedGradientText } from "../ui/animated-gradient-text"
+import { AnimatedGradientText } from "../components/ui/animated-gradient-text"
 
 const ComingSoon = () => {
   return (

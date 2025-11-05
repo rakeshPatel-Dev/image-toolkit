@@ -2,7 +2,8 @@
 @import "tw-animate-css";
 
 .transformProperty {
-  transform: "translateX(-100px) translateY(0px) translateZ(-100px) rotateX(20deg) rotateY(-10deg) rotateZ(20deg)";
+  transform: translateX(-100px) translateY(0px) translateZ(-100px)
+    rotateX(20deg) rotateY(-10deg) rotateZ(20deg);
 }
 
 .faq-container::-webkit-scrollbar {
@@ -15,7 +16,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 @theme inline {
@@ -72,23 +73,23 @@ body {
       transform: translateY(calc(-100% - var(--gap)));
     }
   }
-  --animate-gradient: gradient 8s linear infinite
-;
+  --animate-gradient: gradient 8s linear infinite;
   @keyframes gradient {
-  to {
-    background-position: var(--bg-size, 300%) 0;
+    to {
+      background-position: var(--bg-size, 300%) 0;
     }
   }
   --animate-rippling: rippling var(--duration) ease-out;
   @keyframes rippling {
-  0% {
-    opacity: 1;
+    0% {
+      opacity: 1;
     }
-  100% {
-    transform: scale(2);
-    opacity: 0;
+    100% {
+      transform: scale(2);
+      opacity: 0;
     }
-  }}
+  }
+}
 
 :root {
   --radius: 0.625rem;

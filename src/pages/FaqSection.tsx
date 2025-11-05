@@ -2,8 +2,8 @@
 
 import { useState, useRef } from "react";
 import { ArrowUpRight, ChevronDown } from "lucide-react";
-import { TextAnimate } from "../ui/text-animate";
-import { ProgressiveBlur } from "../ui/progressive-blur";
+import { TextAnimate } from "../components/ui/text-animate";
+import { ProgressiveBlur } from "../components/ui/progressive-blur";
 
 interface FaqItem {
     q: string;
@@ -74,10 +74,10 @@ const FaqSection = () => {
         <main className="grow  pt-16 md:pt-24 pb-16 px-4 md:px-8 lg:px-20">
             {/* Header */}
             <div className="flex flex-col items-center text-center mb-8">
-                <TextAnimate animation="blurInUp" by="text" className="text-[#0f0f0f] dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">
+                <TextAnimate animation="fadeIn" by="word" className="text-[#0f0f0f] dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">
                     How can we help?
                 </TextAnimate>
-                <TextAnimate animation="blurInUp" by="word" className="text-gray-600 dark:text-gray-400 text-base md:text-lg mt-3 max-w-2xl">
+                <TextAnimate animation="fadeIn" by="word" className="text-gray-600 dark:text-gray-400 text-base md:text-lg mt-3 max-w-2xl">
                     Find answers to common questions about our image toolkit, features, and billing.
                 </TextAnimate>
             </div>
@@ -149,8 +149,8 @@ const FaqSection = () => {
 
             {/* Contact Support */}
             <div className="mt-4 text-center">
-                <TextAnimate animation="blurInUp" by="text" className="text-2xl font-bold text-[#0f0f0f] dark:text-white">Can't find your answer?</TextAnimate>
-                <TextAnimate animation="blurInUp" by="word" className="text-gray-500 mt-2">Our support team is here to help you.</TextAnimate>
+                <TextAnimate animation="fadeIn" by="word" className="text-2xl font-bold text-[#0f0f0f] dark:text-white">Can't find your answer?</TextAnimate>
+                <TextAnimate animation="fadeIn" by="word" className="text-gray-500 mt-2">Our support team is here to help you.</TextAnimate>
                 <button className="mt-6 flex min-w-[84px] max-w-[480px] mx-auto items-center justify-center h-12 px-6 rounded-lg hover:bg-orange-700 active:scale-95 bg-orange-600 cursor-pointer text-white text-base font-bold tracking-[0.015em] transition-all hover:scale-105">
                     Contact Support
                 </button>
