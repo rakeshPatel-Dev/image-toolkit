@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/header";
 import Footer from "./components/Footer";
 import Preloader from "./components/Preloader";
@@ -12,15 +12,14 @@ import AnimatedBasedVelocity from "./components/AnimatedBasedVelocity";
 import Process from "./pages/Process";
 import FaqSection from "./pages/FaqSection";
 import Contact from "./pages/Contact";
-
+import Convert from "./pages/Convert";
 import { useReTriggerAnimation } from "./hooks/useReTriggerAnimation";
 import { AnimatePresence } from "framer-motion";
-import { useLocation } from "react-router-dom";
-import Convert from "./pages/Convert";
+import Compress from "./pages/Compress";
 
 const Home = () => (
   <>
-<Preloader />
+    <Preloader />
     <Hero />
     <AnimatedBasedVelocity />
     <Process />
@@ -33,11 +32,18 @@ const Home = () => (
 );
 
 const App = () => {
-    const location = useLocation();
+  const location = useLocation();
   useReTriggerAnimation();
+
+  // ✅ Define routes that should NOT show header/footer
+  const noLayoutRoutes = ["/404"];
+
+  const hideLayout = noLayoutRoutes.includes(location.pathname);
+
   return (
-     <div className="bg-white dark:bg-black">
-      <Header />
+    <div className="bg-white dark:bg-black">
+      {!hideLayout && <Header />}
+
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
@@ -48,11 +54,12 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FaqSection />} />
           <Route path="/convert" element={<Convert />} />
+          <Route path="/Compress" element={<Compress />} />
           <Route path="*" element={<PageNotFound />} />
-          
         </Routes>
       </AnimatePresence>
-      <Footer />
+
+      {!hideLayout && <Footer />}
     </div>
   );
 };

@@ -54,7 +54,7 @@ const Home = () => {
           </Link>
 
           {/* Card 2 */}
-          <Link to='/optimize' className="cursor-pointer group bg-white/50 dark:bg-[#0f0f0f]/50 border border-gray-200 dark:border-[#0f0f0f] hover:bg-gray-100 dark:hover:bg-[#0f0f0f]/80 transition-all p-8 rounded-2xl text-center hover:scale-[1.02] duration-200 relative overflow-hidden">
+          <Link to='/Compress' className="cursor-pointer group bg-white/50 dark:bg-[#0f0f0f]/50 border border-gray-200 dark:border-[#0f0f0f] hover:bg-gray-100 dark:hover:bg-[#0f0f0f]/80 transition-all p-8 rounded-2xl text-center hover:scale-[1.02] duration-200 relative overflow-hidden">
             <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-green-500 dark:bg-[#004225] group-hover:rotate-15 group-hover:scale-110 transition-all rounded-full">
               <AlignVerticalSpaceBetween size={28} className="text-white" />
             </div>

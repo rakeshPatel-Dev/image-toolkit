@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { AlignVerticalSpaceBetween, ChevronDown, ArrowUpRight } from "lucide-react"
 import { TextAnimate } from "@/components/ui/text-animate"
+import { Link } from "react-router-dom"
 
 const CompressImage = () => {
   const [showSteps, setShowSteps] = useState(false)
@@ -60,7 +61,7 @@ const CompressImage = () => {
                 </p>
                 <p className="text-gray-800 flex flow-row justify-between dark:text-white text-sm font-normal leading-normal py-2">
                   Click “Compress” and see the result.
-                  <a href= "#" className= "flex flex-row group hover:text-orange-800 hover:underline  hover:-translate-x-1 hover:underline-offset-8 decoration-2 transition-all">Try Now <ArrowUpRight className="opacity-0 group-hover:opacity-100  group-hover:translate-x-1 transition-all"/></a>
+                  <Link to= "/Compress" className= "flex flex-row group hover:text-orange-800 hover:underline  hover:-translate-x-1 hover:underline-offset-8 decoration-2 transition-all">Try Now <ArrowUpRight className="opacity-0 group-hover:opacity-100  group-hover:translate-x-1 transition-all"/></Link>
                 </p>
               </div>
             </div>

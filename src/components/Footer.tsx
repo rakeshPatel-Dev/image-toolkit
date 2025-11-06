@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="w-full dark:bg-[#0f0f0f]/50 bg-white text-black dark:text-[#E0E0E0] py-12 px-6 sm:px-16 lg:px-24 transition-colors duration-300">
+    <footer className="w-full dark:bg-[#0f0f0f]/50 bg-white text-black dark:text-[#E0E0E0] py-12 px-6 sm:px-16 lg:px-24 transition-colors duration-300 border-t border-black/30">
       <div className="max-w-7xl mx-auto">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 pb-10">

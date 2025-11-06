@@ -41,7 +41,7 @@ const Process = () => {
               {/* Step 1 */}
               <li className="group relative flex flex-col items-center gap-6 text-center md:items-start md:text-left">
                 <div className="flex items-center gap-6 md:w-full">
-                  <div className="relative z-10 flex h-28 w-28 shrink-0 items-center justify-center rounded-full border border-border bg-card shadow-xl shadow-black/20 transition-all duration-300 group-hover:scale-105 group-hover:border-primary/50 group-hover:shadow-primary/20">
+                  <div className="relative z-10 flex h-28 w-28 shrink-0 items-center justify-center rounded-full border border-border bg-card shadow-xl shadow-black/20 transition-all duration-300 group-hover:scale-105 group-hover:border-primary/50 group-hover:shadow-orange-500/20">
                     <div className="absolute inset-0 animate-gradient-move rounded-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent bg-size-[200%_200%] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                     <svg
                       className="h-12 w-12 text-zinc-400 transition-colors duration-300 group-hover:text-primary"
@@ -58,7 +58,7 @@ const Process = () => {
                   </div>
 
                   {/* Hover beam line */}
-                  <div className="absolute -top-14 left-1/2 hidden sm:block h-1 w-40 md:w-full -translate-x-1/2 scale-x-0 transform-gpu bg-linear-to-r from-transparent via-primary/50 to-transparent transition-transform duration-500 group-hover:scale-x-100" />
+                  <div className="absolute -top-14 left-1/2 hidden sm:block h-1 w-40 md:w-full -translate-x-1/2 scale-x-0 transform-gpu bg-linear-to-r from-transparent via-orange-400/50 to-transparent transition-transform duration-500 group-hover:scale-x-100" />
 
                   <div className="hidden grow border-t border-dashed border-border md:block" />
                 </div>
@@ -77,7 +77,7 @@ const Process = () => {
               <li className="group relative flex flex-col items-center gap-6 text-center md:items-start md:text-left">
                 <div className="flex items-center gap-6 md:w-full">
                   <div className="hidden grow border-t border-dashed border-border-dark md:block" />
-                  <div className="relative z-10 flex h-28 w-28 shrink-0 items-center justify-center rounded-full border border-border bg-card shadow-xl shadow-black/20 transition-all duration-300 group-hover:scale-105 group-hover:border-primary/50 group-hover:shadow-primary/20">
+                  <div className="relative z-10 flex h-28 w-28 shrink-0 items-center justify-center rounded-full border border-border bg-card shadow-xl shadow-black/20 transition-all duration-300 group-hover:scale-105 group-hover:border-primary/50 group-hover:shadow-orange-500/20">
                     <div className="absolute inset-0 animate-gradient-move rounded-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent bg-size-[200%_200%] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                     <svg
                       className="h-12 w-12 text-zinc-400 transition-colors duration-300 group-hover:text-primary"
@@ -97,7 +97,7 @@ const Process = () => {
                   </div>
 
                   {/* Hover beam line */}
-                  <div className="absolute -top-14 left-1/2 hidden sm:block h-1 w-40 md:w-full -translate-x-1/2 scale-x-0 transform-gpu bg-linear-to-r from-transparent via-primary/50 to-transparent transition-transform duration-500 group-hover:scale-x-100" />
+                  <div className="absolute -top-14 left-1/2 hidden sm:block h-1 w-40 md:w-full -translate-x-1/2 scale-x-0 transform-gpu bg-linear-to-r from-transparent via-orange-400/50 to-transparent transition-transform duration-500 group-hover:scale-x-100" />
 
                   <div className="hidden grow border-t border-dashed border-border md:block" />
                 </div>
@@ -116,7 +116,7 @@ const Process = () => {
               <li className="group relative flex flex-col items-center gap-6 text-center md:items-start md:text-left">
                 <div className="flex items-center gap-6 md:w-full">
                   <div className="hidden grow border-t border-dashed border-border-dark md:block" />
-                  <div className="relative z-10 flex h-28 w-28 shrink-0 items-center justify-center rounded-full border border-border bg-card shadow-xl shadow-black/20 transition-all duration-300 group-hover:scale-105 group-hover:border-primary/50 group-hover:shadow-primary/20">
+                  <div className="relative z-10 flex h-28 w-28 shrink-0 items-center justify-center rounded-full border border-border bg-card shadow-xl shadow-black/20 transition-all duration-300 group-hover:scale-105 group-hover:border-primary/50 group-hover:shadow-orange-500/20">
                     <div className="absolute inset-0 animate-gradient-move rounded-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent bg-size-[200%_200%] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                     <svg
                       className="h-12 w-12 text-zinc-400 transition-colors duration-300 group-hover:text-primary"
@@ -135,7 +135,7 @@ const Process = () => {
                   </div>
 
                   {/* Hover beam line */}
-                  <div className="absolute -top-14 left-1/2 hidden sm:block h-1 w-40 md:w-full -translate-x-1/2 scale-x-0 transform-gpu bg-linear-to-r from-transparent via-primary/50 to-transparent transition-transform duration-500 group-hover:scale-x-100" />
+                  <div className="absolute -top-14 left-1/2 hidden sm:block h-1 w-40 md:w-full -translate-x-1/2 scale-x-0 transform-gpu bg-linear-to-r from-transparent via-orange-400/50 to-transparent transition-transform duration-500 group-hover:scale-x-100" />
                 </div>
 
                 <div className="flex flex-col sm:items-end gap-2">
@@ -143,7 +143,7 @@ const Process = () => {
                     3. Download Your File
                   </TextAnimate>
                   <TextAnimate animation="fadeIn" by="word" className="sm:text-right text-gray-600 dark:text-white/50">
-                    Preview your optimized image and download it instantly in your desired format.
+                    Preview your Compressd image and download it instantly in your desired format.
                   </TextAnimate>
                 </div>
               </li>
@@ -153,7 +153,7 @@ const Process = () => {
 
           {/* Button */}
           <div className="flex pt-8">
-            <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 dark:bg-primary-dark bg-[#0f0f0f]/10 text-black/80 border border-black/30 dark:text-white text-base font-bold leading-normal tracking-wide shadow-lg shadow-primary/30 transition-all duration-300 hover:scale-105 hover:shadow-primary/40 focus:outline-none focus:ring-4 focus:ring-primary/50">
+            <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 dark:bg-primary-dark bg-[#0f0f0f]/10 text-black/80 border border-black/30 dark:text-white text-base font-bold leading-normal tracking-wide shadow-lg shadow-orange-600/30 transition-all duration-300 hover:scale-105 hover:shadow-orange-600/40 focus:outline-none focus:ring-3 focus:ring-orange-800/50">
               <span className="truncate">Get Started Now</span>
             </button>
           </div>

@@ -148,7 +148,7 @@ export function ReviewMarquee() {
 
     <div className="mt-10 dark:bg-black relative flex h-150 w-full flex-row items-center justify-center gap-4 overflow-hidden perspective:near">
       <div
-        className="transformProperty flex flex-row items-center gap-4"
+        className="transformProperty ml-40 flex flex-row items-center gap-4"
 
       >
         <Marquee pauseOnHover vertical className="[--duration:20s]">

@@ -41,33 +41,42 @@ const FileTransform = () => {
           </button>
 
           {/* Steps Section */}
-          {showSteps && (
-            <div className="mt-4 border-t border-gray-300 dark:border-gray-700 pt-4">
-              <div className="grid grid-cols-[auto_1fr] gap-x-4">
-                <p className="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal py-2">
-                  Step 1
-                </p>
-                <p className="text-gray-800 dark:text-white text-sm font-normal leading-normal py-2">
-                  Upload your image.
-                </p>
+       
 
-                <p className="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal py-2">
-                  Step 2
-                </p>
-                <p className="text-gray-800 dark:text-white text-sm font-normal leading-normal py-2">
-                  Select the desired output format.
-                </p>
+{showSteps && (
+  <div className="mt-4 border-t border-gray-300 dark:border-gray-700 pt-4">
+    <div className="grid grid-cols-[auto_1fr] gap-x-4">
+      <p className="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal py-2">
+        Step 1
+      </p>
+      <p className="text-gray-800 dark:text-white text-sm font-normal leading-normal py-2">
+        Upload your image.
+      </p>
 
-                <p className="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal py-2">
-                  Step 3
-                </p>
-                <p className="text-gray-800 flex flex-row justify-between dark:text-white text-sm font-normal leading-normal py-2">
-                  Click “Convert” and download your new image.
-                  <Link to= "/convert" className= "flex flex-row group hover:text-orange-800 hover:underline  hover:-translate-x-1 hover:underline-offset-8 decoration-2 transition-all">Try Now <ArrowUpRight className="opacity-0 group-hover:opacity-100  group-hover:translate-x-1 transition-all"/></Link>
-                </p>
-              </div>
-            </div>
-          )}
+      <p className="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal py-2">
+        Step 2
+      </p>
+      <p className="text-gray-800 dark:text-white text-sm font-normal leading-normal py-2">
+        Select the desired output format.
+      </p>
+
+      <p className="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal py-2">
+        Step 3
+      </p>
+      <p className="text-gray-800 flex flex-row justify-between dark:text-white text-sm font-normal leading-normal py-2">
+        Click “Convert” and download your new image.
+        <Link
+          to="/convert"
+          className="flex items-center gap-1 group text-orange-600 hover:text-orange-800 hover:underline hover:underline-offset-8 decoration-2 transition-all"
+        >
+          Try Now
+          <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+        </Link>
+      </p>
+    </div>
+  </div>
+)}
+
         </div>
       </div>
     </section>

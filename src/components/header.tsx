@@ -38,7 +38,7 @@ const Header: React.FC<HeaderProps> = () => {
           Convert
         </Link>
         <Link
-          to="/optimize"
+          to="/Compress"
           className="hover:text-orange-500 dark:hover:text-orange-400 hover:underline hover:underline-offset-4 decoration-2 transition-all"
         >
           Compress
