@@ -216,16 +216,27 @@ const Compress: React.FC = () => {
                         ) : (
                             <div
                                 {...getRootProps()}
-                                className="flex h-72 sm:h-80 w-full cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed border-gray-400/60 bg-white/60 dark:bg-[#0f0f0f]/70 hover:border-orange-500/80 transition-all p-4 sm:p-6 text-center"
+                                className="flex h-72 sm:h-80 w-full cursor-pointer flex-col items-center gap-2 justify-center rounded-xl border-2 border-dashed border-gray-400/60 bg-white/60 dark:bg-[#0f0f0f]/70 group hover:border-orange-500/80 transition-all p-4 sm:p-6 text-center"
                             >
                                 <input {...getInputProps()} />
-                                <Upload className="text-black dark:text-white mb-3 h-14 w-14 sm:h-16 sm:w-16" />
+                                <Upload className="group-hover:scale-110 transition-all  text-black dark:text-white mb-3 h-14 w-14 sm:h-16 sm:w-16" />
                                 <p className="text-[#0f0f0f] dark:text-white font-semibold text-base sm:text-lg">
                                     Drag & Drop images here or click to upload
+                                </p>
+                                <p className="text-gray-400 font-semibold text-sm">
+                                    OR,
                                 </p>
                                 <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-2">
                                     Upload single or multiple image for size compression.
                                 </p>
+                                {/* 🟠 Added Browse Button */}
+                                <button
+                                    type="button"
+                                    className="flex items-center gap-2 mt-2 px-4 h-10 rounded-lg border cursor-pointer bg-black/10 dark:bg-white/10 border-gray-400 dark:text-white group text-sm font-bold hover:scale-105 active:scale-95 transition-all"
+                                >
+                                    <Plus size={16} /> Choose to Browse
+                                </button>
+
                             </div>
                         )}
 
@@ -366,8 +377,8 @@ const Compress: React.FC = () => {
                                     <div
                                         key={index}
                                         className={`flex items-center gap-4 rounded-lg p-3 border-2 transition-all cursor-pointer ${currentPreviewIndex === index
-                                                ? "border-orange-500 dark:bg-white/10 bg-black/10 shadow-lg"
-                                                : "border-transparent bg-black/5 dark:bg-white/5"
+                                            ? "border-orange-500 dark:bg-white/10 bg-black/10 shadow-lg"
+                                            : "border-transparent bg-black/5 dark:bg-white/5"
                                             }`}
                                         onClick={() => setCurrentPreviewIndex(index)}
                                     >
@@ -384,18 +395,18 @@ const Compress: React.FC = () => {
                                                 <span>{(img.originalSize / 1024 / 1024).toFixed(2)} MB</span>
                                                 <ArrowRight
                                                     className={`${img.compressedSize
-                                                            ? img.compressedSize > img.originalSize
-                                                                ? "text-red-500"
-                                                                : "text-green-500"
-                                                            : "text-primary"
+                                                        ? img.compressedSize > img.originalSize
+                                                            ? "text-red-500"
+                                                            : "text-green-500"
+                                                        : "text-primary"
                                                         }`}
                                                 />
                                                 <span
                                                     className={`font-semibold ${img.compressedSize
-                                                            ? img.compressedSize > img.originalSize
-                                                                ? "text-red-500"
-                                                                : "text-green-500"
-                                                            : "text-primary"
+                                                        ? img.compressedSize > img.originalSize
+                                                            ? "text-red-500"
+                                                            : "text-green-500"
+                                                        : "text-primary"
                                                         }`}
                                                 >
                                                     {img.compressedSize
@@ -427,4 +438,4 @@ const Compress: React.FC = () => {
     );
 };
 
-export default Compress ;
+export default Compress;

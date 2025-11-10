@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { TextAnimate } from '../components/ui/text-animate'
 
 const Process = () => {
@@ -107,7 +108,7 @@ const Process = () => {
                     2. Process Your Image
                   </TextAnimate>
                   <TextAnimate animation="fadeIn" by="word" className="text-center text-gray-600 dark:text-white/50">
-                    Choose to convert, compress, or upscale. Our AI toolkit automatically works its magic.
+                    Choose to convert, compress, or Resize . Our AI toolkit automatically works its magic.
                   </TextAnimate>
                 </div>
               </li>
@@ -154,7 +155,7 @@ const Process = () => {
           {/* Button */}
           <div className="flex pt-8">
             <button className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 dark:bg-primary-dark bg-[#0f0f0f]/10 text-black/80 border border-black/30 dark:text-white text-base font-bold leading-normal tracking-wide shadow-lg shadow-orange-600/30 transition-all duration-300 hover:scale-105 hover:shadow-orange-600/40 focus:outline-none focus:ring-3 focus:ring-orange-800/50">
-              <span className="truncate">Get Started Now</span>
+              <Link to="/tools" className="truncate">Get Started Now</Link>
             </button>
           </div>
 

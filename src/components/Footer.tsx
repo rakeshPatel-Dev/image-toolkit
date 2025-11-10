@@ -2,6 +2,7 @@ import { ToolCase, Github, Twitter, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const developer = "https://rakeshthedev.netlify.app/"
   return (
     <footer className="w-full dark:bg-[#0f0f0f]/50 bg-white text-black dark:text-[#E0E0E0] py-12 px-6 sm:px-16 lg:px-24 transition-colors duration-300 border-t border-black/30">
       <div className="max-w-7xl mx-auto">
@@ -24,7 +25,8 @@ const Footer = () => {
                 {[
                   { name: "Convert", path: "/convert" },
                   { name: "Compress", path: "/compress" },
-                  { name: "Upscale", path: "/upscale" },
+                  { name: "Watermark", path: "/watermark" },
+                  { name: "More Tools", path: "/tools" },
                 ].map((item) => (
                   <li key={item.name}>
                     <Link
@@ -76,14 +78,14 @@ const Footer = () => {
             <div>
               <h3 className="font-bold text-black dark:text-white mb-4 ">More from Developer</h3>
               <ul className="space-y-3">
-                {["PhotoLab App", "Call Reminder App"].map((item) => (
+                {["PhotoLab-App", "Call Reminder App"].map((item) => (
                   <li key={item}>
-                    <a
-                      href="javascript:void(0)"
-                      className="text-[#555]  hover:text-orange-600 transition-all hover:underline hover:underline-offset-6 decoration-[1.5px]"
+                    <Link
+                      to={item === "PhotoLab-App" ? "https://photolab-app.netlify.app/" : "https://callreminderapp.netlify.app/"}
+                      target="_blank" rel="noopener noreferrer" className="text-[#555]  hover:text-orange-600 transition-all hover:underline hover:underline-offset-6 decoration-[1.5px]"
                     >
                       {item}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -124,7 +126,7 @@ const Footer = () => {
           <p>
             Designed & Developed by{" "}
             <a
-              href="rakeshthedev.netlify.app" target="_blank"
+              href={developer} target="_blank"
               className="text-primary font-medium hover:underline transition-colors"
             >
               Rakesh Patel

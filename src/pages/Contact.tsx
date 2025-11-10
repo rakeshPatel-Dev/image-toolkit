@@ -1,5 +1,6 @@
 import { Mail, Facebook, Linkedin, Instagram } from "lucide-react";
 import { TextAnimate } from "../components/ui/text-animate";
+import FadeInText from "@/components/ui/FadeInText";
 
 const Contact = () => {
   return (
@@ -7,9 +8,8 @@ const Contact = () => {
       <div className="max-w-4xl mx-auto flex flex-col gap-12">
         {/* Header */}
         <div className="text-center space-y-3">
-          <TextAnimate animation="fadeIn" by="word" className="text-4xl sm:text-5xl font-black text-black dark:text-white tracking-tight">
-            Get in Touch
-          </TextAnimate>
+          <FadeInText text="Get in Touch" className="text-4xl sm:text-5xl font-black text-black dark:text-white tracking-tight">
+          </FadeInText>
           <TextAnimate animation="fadeIn" by="word" className="text-gray-600 dark:text-[#9db0b9] max-w-xl mx-auto text-base">
             We'd love to hear from you! Fill out the form below or reach out using the contact details.
           </TextAnimate>

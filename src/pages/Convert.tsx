@@ -184,7 +184,7 @@ const Convert: React.FC = () => {
 
       {/* Upload Area */}
       <div
-        className="flex flex-col items-center gap-6 rounded-xl border-2 border-dashed border-gray-200 shadow-md px-6 py-14 hover:border-orange-600 transition-colors duration-300 group cursor-pointer"
+        className="flex flex-col items-center gap-4 rounded-xl border-2 border-dashed border-gray-200 shadow-md px-6 py-14 hover:border-orange-600 transition-colors duration-300 group cursor-pointer"
         onDrop={handleDrop}
         onDragOver={handleDragOver}
         onClick={() => fileInputRef.current?.click()}
@@ -193,11 +193,14 @@ const Convert: React.FC = () => {
         <p className="text-[#0f0f0f] dark:text-white text-lg font-bold text-center">
           Drag & Drop Your Images Here
         </p>
+        <p className="text-gray-400 text-sm font-bold text-center">
+          OR,
+        </p>
         <p className="text-gray-400 text-sm text-center">
           Upload single or multiple images for conversion.
         </p>
         <button className="flex items-center gap-2 mt-2 px-4 h-10 rounded-lg border cursor-pointer bg-black/10 dark:bg-white/10 border-gray-400 dark:text-white group text-sm font-bold hover:scale-105 active:scale-95 transition-all">
-          <Plus className="w-4 h-4" /> Choose Files
+          <Plus className="w-4 h-4" /> Click to Browse
         </button>
         <input
           ref={fileInputRef}

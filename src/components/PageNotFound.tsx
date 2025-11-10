@@ -11,7 +11,7 @@ const PageNotFound = () => {
     
     { name: "Convert", path: "/convert" },
     { name: "Compress", path: "/compress" },
-    { name: "Upscale", path: "/upscale" },
+    { name: "Resize ", path: "/Resize " },
   ];
 
   const handleSearch = (e) => {

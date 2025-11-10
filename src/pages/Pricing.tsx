@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { CheckCheck } from "lucide-react";
 import { TextAnimate } from "../components/ui/text-animate";
+import { Link } from "react-router-dom";
 
 const Pricing = () => {
   const [billing, setBilling] = useState<"Monthly" | "Yearly">("Monthly");
@@ -12,22 +13,25 @@ const Pricing = () => {
       title: "Free",
       price: { Monthly: 0, Yearly: 0 },
       description: "For casual users and testing.",
+      extraInfo: "", // no extra info for free plan
       features: ["Limited file conversions", "Basic compression", "Standard upscaling"],
       popular: false,
-      buttonText: "Sign Up",
+      buttonText: "Get Started",
     },
     {
       title: "Pro",
       price: { Monthly: 15, Yearly: 150 },
       description: "For professionals and power users.",
+      extraInfo: " $15 when billed monthly | Save $30",
       features: ["Unlimited conversions", "Advanced compression", "AI-powered upscaling", "Batch processing"],
       popular: true,
-      buttonText: "Get Started",
+      buttonText: "Contact Us",
     },
     {
       title: "Business",
       price: { Monthly: 40, Yearly: 400 },
       description: "For teams and organizations.",
+      extraInfo: " $40 when billed monthly | Save $80",
       features: ["All Pro features", "Team accounts", "Priority support", "API access"],
       popular: false,
       buttonText: "Contact Us",
@@ -72,7 +76,6 @@ const Pricing = () => {
           ))}
         </div>
       </div>
-      
 
       {/* Pricing Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -102,18 +105,24 @@ const Pricing = () => {
                 </span>
                 <span className="text-base font-bold">/{billing.toLowerCase()}</span>
               </p>
+              {billing === "Yearly" && plan.extraInfo && (
+                <p className="text-gray-500 dark:text-[#9db0b9] text-sm font-medium">
+                  {plan.extraInfo}
+                </p>
+              )}
             </div>
 
-            <button
-              className={` cursor-pointer flex min-w-[84px] max-w-full items-center justify-center h-10 px-4 rounded-lg text-sm font-bold tracking-[0.015em]  transition-all active:scale-95
+            <Link
+                to={plan.buttonText === "Get Started" ? "/tools" : "/contact"}
+              className={`cursor-pointer flex min-w-[84px] max-w-full items-center justify-center h-10 px-4 rounded-lg text-sm font-bold tracking-[0.015em] transition-all active:scale-95
                 ${
                   plan.popular
                     ? "bg-orange-600 text-white hover:bg-orange-700"
-                    : "bg-gray-200 dark:bg-[#283339] text-[#0f0f0f]/80 dark:text-white hover:bg-gray-300 dark:hover:bg-[#3b4b54]"
+                    : "bg-gray-200 dark:bg-[#0f0f0f]/80 border dark:border-white/10 border-black/10 text-[#0f0f0f]/80 dark:text-white hover:bg-gray-300 dark:hover:bg-white/10"
                 }`}
             >
               {plan.buttonText}
-            </button>
+            </Link>
 
             <div className="flex flex-col gap-3 mt-2">
               {plan.features.map((feature) => (

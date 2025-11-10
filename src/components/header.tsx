@@ -20,37 +20,53 @@ const Header: React.FC<HeaderProps> = () => {
       {/* Navigation */}
       <nav className="hidden md:flex gap-8 text-sm text-gray-700 dark:text-gray-300">
         <Link
-          to=""
+          to="/"
           className="hover:text-orange-500 dark:hover:text-orange-400 hover:underline hover:underline-offset-4 decoration-2 transition-all"
         >
-         
+         Home
         </Link>
         <Link
-          to="/about"
+          to="/exploreTools"
           className="hover:text-orange-500 dark:hover:text-orange-400 hover:underline hover:underline-offset-4 decoration-2 transition-all"
         >
-          Toolkit
+          Know Tools
         </Link>
         <Link
           to="/convert"
-          className="hover:text-orange-500 dark:hover:text-orange-400 hover:underline hover:underline-offset-4 decoration-2 transition-all"
+          className=" font-bold hover:text-orange-500 dark:hover:text-orange-400 hover:underline hover:underline-offset-4 decoration-2 transition-all"
         >
           Convert
         </Link>
         <Link
           to="/Compress"
-          className="hover:text-orange-500 dark:hover:text-orange-400 hover:underline hover:underline-offset-4 decoration-2 transition-all"
+          className= " font-bold hover:text-orange-500 dark:hover:text-orange-400 hover:underline hover:underline-offset-4 decoration-2 transition-all"
         >
           Compress
         </Link>
         <Link
-          to="/upscale"
+          to="/tools"
+          className="font-bold hover:text-orange-500 dark:hover:text-orange-400 hover:underline hover:underline-offset-4 decoration-2 transition-all"
+        >
+          More Tools
+        </Link>
+      </nav>
+      <div className=" flex flow-row gap-6">
+        <Link
+          to="/pricing"
           className="hover:text-orange-500 dark:hover:text-orange-400 hover:underline hover:underline-offset-4 decoration-2 transition-all"
         >
-          Upscale
+          Pricing
         </Link>
+        <Link
+          to="/contact"
+          className="hover:text-orange-500 dark:hover:text-orange-400 hover:underline hover:underline-offset-4 decoration-2 transition-all"
+        >
+          Contact
+        </Link>
+
         <AnimatedThemeToggler className="cursor-pointer" />
-      </nav>
+
+      </div>
     </header>
   );
 };

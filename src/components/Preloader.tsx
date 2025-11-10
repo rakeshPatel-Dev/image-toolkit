@@ -11,7 +11,7 @@ const Preloader = () => {
         const next = old + Math.random() * 10; // smooth randomness
         if (next >= 100) {
           clearInterval(interval);
-          setTimeout(() => setLoaded(true), 500); // short fade delay
+          setTimeout(() => setLoaded(true), 300); // short fade delay
           return 100;
         }
         return next;

@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom"
-import CompressImage from "./AboutCompress"
-import FileTransform from "./AboutConvert"
-import Watermark from "./AboutWatermark"
+import RemoveBackground from "./about/AboutBgRemove"
+import CompressImage from "./about/AboutCompress"
+import FileTransform from "./about/AboutConvert"
+import CropImage from "./about/AboutCrop"
+import ResizeImage from "./about/AboutResize"
+import Watermark from "./about/AboutWatermark"
 import { TextAnimate } from "@/components/ui/text-animate"
-import { ArrowUpRight } from "lucide-react"
-
-const About = () => {
+const AboutTools = () => {
   return (
     <section
       id="about"
@@ -37,17 +37,15 @@ const About = () => {
         <div className="w-full space-y-12 sm:space-y-16 md:space-y-20">
           <FileTransform />
           <CompressImage />
-          <Watermark />
+          <Watermark  />
+          <ResizeImage/>
+          <CropImage/>
+          <RemoveBackground/>
         </div>
 
-      </div>
-      <div className=" flex flex-row justify-end px-16 py-6 text-lg ">
-        <h1 className="flex flex-row gap-1.5 group hover:-translate-x-1 transition-all">Want to read <Link to="/exploreTools" className=" cursor-pointer text-orange-600 font-bold group-hover:underline group-hover:underline-offset-8 decoration-2 group-hover:text-xl transition-all active:scale-95">
-           More
-          </Link> ? <ArrowUpRight className="group-hover:translate-x-1 opacity-0 group-hover:opacity-100 transition-all text-orange-600"/></h1>
       </div>
     </section>
   )
 }
 
-export default About
+export default AboutTools
