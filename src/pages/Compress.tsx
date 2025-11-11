@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { useDropzone } from "react-dropzone";
 import imageCompression from "browser-image-compression";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
 import {
@@ -158,7 +158,6 @@ const Compress: React.FC = () => {
 
     return (
         <div className="relative">
-            <Toaster />
             <main className="flex flex-col mt-10 items-center w-full px-3 sm:px-4 md:px-6 lg:px-8 py-10 md:py-16 gap-10">
                 {/* Heading */}
                 <div className="flex flex-col items-center text-center gap-3 px-2">

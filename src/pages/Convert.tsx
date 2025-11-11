@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
 import { X, Download, Upload, Plus } from "lucide-react";
@@ -171,7 +171,6 @@ const Convert: React.FC = () => {
 
   return (
     <main className="flex flex-col gap-8 py-10 mt-10 px-4 max-w-6xl mx-auto">
-      <Toaster position="top-right" />
 
       {/* Page Heading */}
       <div className="flex flex-col gap-2">

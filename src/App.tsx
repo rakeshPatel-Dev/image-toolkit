@@ -22,6 +22,7 @@ import Resize  from "./pages/Resize";
 import AllTools from "./pages/AllTools";
 import AboutTools from "./pages/AboutTools";
 import Watermark from "./pages/Watermark";
+import CropImage from "./pages/CropImage";
 
 const Home = () => (
   <>
@@ -62,6 +63,7 @@ const App = () => {
           <Route path="/convert" element={<Convert />} />
           <Route path="/Compress" element={<Compress />} />
           <Route path="/resize" element={<Resize  />} />
+          <Route path="/crop" element={<CropImage  />} />
           <Route path="/watermark" element={<Watermark  />} />
           <Route path="/Tools" element={<AllTools />} />
           {/* <Route path="/addwatermark" element={<AddWatermark />} /> */}
@@ -70,7 +72,7 @@ const App = () => {
       </AnimatePresence>
 
       {!hideLayout && <Footer />}
-        <Toaster position="bottom-center" toastOptions={{ duration: 2500 }} />
+        <Toaster position="top-center" toastOptions={{ duration: 2500 }} />
     </div>
   );
 };
