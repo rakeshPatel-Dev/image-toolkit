@@ -3,7 +3,7 @@ import { Toaster } from "react-hot-toast";
 
 import Header from "./components/header";
 import Footer from "./components/Footer";
-import Preloader from "./components/Preloader";
+// import Preloader from "./components/Preloader";
 import PageNotFound from "./components/PageNotFound";
 
 import Hero from "./pages/Hero";
@@ -18,7 +18,7 @@ import Convert from "./pages/Convert";
 import { useReTriggerAnimation } from "./hooks/useReTriggerAnimation";
 import { AnimatePresence } from "framer-motion";
 import Compress from "./pages/Compress";
-import Resize  from "./pages/Resize";
+import Resize from "./pages/Resize";
 import AllTools from "./pages/AllTools";
 import AboutTools from "./pages/AboutTools";
 import Watermark from "./pages/Watermark";
@@ -26,7 +26,7 @@ import CropImage from "./pages/CropImage";
 
 const Home = () => (
   <>
-    <Preloader />
+    {/* <Preloader /> */}
     <Hero />
     <AnimatedBasedVelocity />
     <Process />
@@ -62,9 +62,9 @@ const App = () => {
           <Route path="/faq" element={<FaqSection />} />
           <Route path="/convert" element={<Convert />} />
           <Route path="/Compress" element={<Compress />} />
-          <Route path="/resize" element={<Resize  />} />
-          <Route path="/crop" element={<CropImage  />} />
-          <Route path="/watermark" element={<Watermark  />} />
+          <Route path="/resize" element={<Resize />} />
+          <Route path="/crop" element={<CropImage />} />
+          <Route path="/watermark" element={<Watermark />} />
           <Route path="/Tools" element={<AllTools />} />
           {/* <Route path="/addwatermark" element={<AddWatermark />} /> */}
           <Route path="*" element={<PageNotFound />} />
@@ -72,7 +72,7 @@ const App = () => {
       </AnimatePresence>
 
       {!hideLayout && <Footer />}
-        <Toaster position="top-center" toastOptions={{ duration: 2500 }} />
+      <Toaster position="top-center" toastOptions={{ duration: 2500 }} />
     </div>
   );
 };

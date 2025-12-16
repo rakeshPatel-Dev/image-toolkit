@@ -1,7 +1,7 @@
 // Watermark.tsx
 import FadeInText from "@/components/ui/FadeInText";
 import { TextAnimate } from "@/components/ui/text-animate";
-import { AlignHorizontalSpaceAround, ArrowDown, Download, Layers, Upload, X } from "lucide-react";
+import { AlignHorizontalSpaceAround,  Download, Layers, Upload, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import toast from "react-hot-toast";
 

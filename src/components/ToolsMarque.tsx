@@ -69,7 +69,7 @@ const ReviewCard = ({
       className={cn(
         "relative h-full flex flex-col w-58 sm:w-64 cursor-pointer overflow-hidden rounded-xl border p-6",
         // light styles
-        "border-gray-950/60 bg-black/20 hover:bg-black/40 transition-all",
+        "border-gray-950/60 backdrop-blur-md bg-black/20 hover:bg-black/40 transition-all",
         // dark styles
         "dark:border-gray-50/10 dark:bg-[#0f0f0f]/30 dark:hover:bg-[#0f0f0f]/60"
       )}
@@ -95,7 +95,7 @@ export function Tools() {
   return (
     <>
       <div className="relative flex max-w-8xl w-80 sm:w-xl md:w-2xl lg:w-4xl xl:w-6xl flex-col items-center justify-center overflow-hidden">
-        <Marquee pauseOnHover className="[--duration:5s]">
+        <Marquee pauseOnHover className="[--duration:10s]">
           {firstRow.map((review) => (
             <ReviewCard key={review.username} {...review} />
           ))}
